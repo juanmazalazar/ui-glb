@@ -1,125 +1,188 @@
-//app.js
-
-//This the data I will fill the model
-var promo = {
-    "origin": "Buenos Aires",
-    "destination": "El Calafate",
-    "price": 1200,
-    "currency": "ARS",
-    "currencySymbol": "$"
+var logo = {   
+    "el" : "#logo",
+    "img" : {
+        "name": "logo_Aerolineas.gif",
+        "folder": "img",
+        "alt": "Logo Aerolineas Argentinas"
+    },
+    "url": "http://www.aerolineas.com.ar/"
 };
 
-// receive the data - array of videos
-
-var data = {
-    "videos": [
-
-      {
-        "id" : 1,
-        "link" : "https://www.youtube.com/watch?v=pawZ59OQZ3g",
-        "capture": "https://i.ytimg.com/vi/pawZ59OQZ3g/hqdefault.jpg?custom=true&w=246&h=138&stc=true&jpg444=true&jpgq=90&sp=68&sigh=6SLjEYdkb_plVj2QZrH26sSNsn4",
-        "duration": "3:45",
-        "title": "Vida Salvaje: El Humano de Boliche | Hecatombe!",
-        "visualizations": "187.182",
-        "uploaded": "2 days ago",    
-        "user": {
-          "name": "Hecatombe Producciones",
-          "profile": "https://www.youtube.com/user/HecatombeOk"
+var subMenu = {
+    "el": "#subMenu",
+    "access" : {
+        "description" : "Ingresá a tu cuenta Aerolíneas Plus",
+        "url": "/acces"
+    },
+    "phone": {
+        "number": "0810-222-86527",
+        "url" : "/click"
+    },
+    "idioms" : [
+        {
+            "description": "Español (Argentina)",
+            "value": "es-ar"
+        },
+        {
+            "description": "English (Argentina)",
+            "value": "en-ar"
+        },
+        {
+            "description": "Español (Argentina)",
+            "value": "es-cl"
         }
-      },
-      {
-        "id" : 2,
-        "link" : "https://www.youtube.com/watch?v=vISMADNi2c8",
-        "capture": "https://i.ytimg.com/vi/vISMADNi2c8/hqdefault.jpg?custom=true&w=246&h=138&stc=true&jpg444=true&jpgq=90&sp=68&sigh=M6DmX0NKDICJGGXqepBiFlu2ORs",
-        "duration": "5:42",
-        "title": "LA VIDA EN CANCIONES | Hecatombe! | Video Oficial",
-        "visualizations": "4.935.016",
-        "uploaded": "1 year ago",    
-        "user": {
-          "name": "Hecatombe Producciones",
-          "profile": "https://www.youtube.com/user/HecatombeOk"
-        }
-      },
-      {
-        "id" : 3,
-        "link": "https://www.youtube.com/watch?v=908a2IgPPBs",
-        "capture": "https://i.ytimg.com/vi/908a2IgPPBs/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=MAMxUEIL_oKrEmtqm_hr_TpjvN8",
-        "duration": "56:35",
-        "title": "Feeling Happy - New Best Of Vocal Deep House Tropical Music Chill Out 2017",
-        "visualizations": "880.016",
-        "uploaded": "2 months ago",    
-        "user": {
-          "name": "DjRegard Official",
-          "profile": "https://www.youtube.com/channel/UCw39ZmFGboKvrHv4n6LviCA"
-        }
-      },
-      {
-        "id" : 4,
-        "link" : "https://www.youtube.com/watch?v=6K3aLDjmm7s",
-        "capture": "https://i.ytimg.com/vi/6K3aLDjmm7s/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=2eqRVldt59a1lw-LAQd_1hYWLRI",
-        "duration": "6:03",
-        "title": "TOOLS OF TITANS | BEST QUOTES | TIM FERRISS",
-        "visualizations": "333",
-        "uploaded": "1 day ago",    
-        "user": {
-          "name": "Wolfsuka",
-          "profile": "https://www.youtube.com/channel/UC1QAOyWvkQ5cn9V81g4f8Iw"
-        }
-      },
-      {
-        "id" : 5,
-        "link": "https://www.youtube.com/watch?v=908a2IgPPBs",
-        "capture": "https://i.ytimg.com/vi/908a2IgPPBs/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=MAMxUEIL_oKrEmtqm_hr_TpjvN8",
-        "duration": "56:35",
-        "title": "Feeling Happy - New Best Of Vocal Deep House Tropical Music Chill Out 2017",
-        "visualizations": "880.016",
-        "uploaded": "2 months ago",    
-        "user": {
-          "name": "DjRegard Official",
-          "profile": "https://www.youtube.com/channel/UCw39ZmFGboKvrHv4n6LviCA"
-        }
-      },
-      {
-        "id" : 6,
-        "link": "https://www.youtube.com/watch?v=908a2IgPPBs",
-        "capture": "https://i.ytimg.com/vi/908a2IgPPBs/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=MAMxUEIL_oKrEmtqm_hr_TpjvN8",
-        "duration": "56:35",
-        "title": "Feeling Happy - New Best Of Vocal Deep House Tropical Music Chill Out 2017",
-        "visualizations": "880.016",
-        "uploaded": "2 months ago",    
-        "user": {
-          "name": "DjRegard Official",
-          "profile": "https://www.youtube.com/channel/UCw39ZmFGboKvrHv4n6LviCA"
-        }
-      }
-
-
-    ]
+    ],
+    "contact":{
+        "description": "Contacto",
+        "url": "/contacto"
+    },
+    "faq":{
+        "description": "Preguntas frecuentes",
+        "url": "/faq"
+    }    
 }
 
+var menu = {
+    "type":"horizontal",
+    "el": "#menu",    
+    "items": [
+        {
+            "text":"La empresa",
+            "href":"http://www.google.com.ar",
+            "target": "_self",            
+        },
+        {
+            "text":"Reservas y servicios",
+            "href":"http://www.google.com.ar",
+            "target": "_self",            
+        },
+        {
+            "text":"Info para tu viaje",
+            "href":"http://www.google.com.ar",
+            "target": "_self",            
+        },
+        {
+            "text":"Aerolíneas Plus",
+            "href":"http://www.google.com.ar",
+            "target": "_self",            
+        }
+        ]
+    }
 
-/*
-// Creating view to render
-var promoView = new PromoView({
-    el: '#promos',
-    model: new Promo(promo)
+
+var promos = {    
+    "promos":[
+        {
+        "type": "full",
+        "origin": "Buenos Aires",
+        "destination": "El Calafate",
+        "price": 2428,
+        "currency": "ARS",
+        "currencySymbol": "$",
+        "url": "es-ar/reservasservicios/vuelo/147_buenos-aires-el-calafate",
+        "description": "Llegá volando a El Calafate. Más rápido, más cómodo, más cuotas.",
+        "img": {
+            "name": "calafate.jpg",
+            "folder": "img",
+            "alt": "Imagen para el Calafate",            
+            }
+        },
+        {
+        "type": "full",
+        "origin": "Buenos Aires",
+        "destination": "Neuquén",
+        "price": 1978,
+        "currency": "ARS",
+        "currencySymbol": "$",
+        "url": "es-ar/reservasservicios/vuelo/147_buenos-aires-neuquen",
+        "description": "Volá a Neuquén y comprá con la mejor financiación con más de 30 bancos.",
+        "img": {
+            "name": "neuquen.gif",
+            "folder": "img",
+            "alt": "Imagen para neuquen",            
+            }
+        },
+    ],   
+};
+
+var promosSimple = {    
+    "promos":[
+        {
+            "type": "simple",
+            "origin": "Buenos Aires",
+            "destination": "Mar del Plata",
+            "price": 1242,
+            "currency": "ARS",
+            "currencySymbol": "$",
+            "url": "es-ar/reservasservicios/vuelo/139_buenos-aires-mar-del-plata"
+        },
+        {
+            "type": "simple",
+            "origin": "Buenos Aires",
+            "destination": "Córdoba",
+            "price": 1675,
+            "currency": "ARS",
+            "currencySymbol": "$",
+            "url":"es-ar/reservasservicios/vuelo/138_buenos-aires-cordoba"
+        },
+        {
+            "type": "simple",
+            "origin": "Buenos Aires",
+            "destination": "Río Cuarto",
+            "price": 1564,
+            "currency": "ARS",
+            "currencySymbol": "$",
+            "url":"es-ar/reservasservicios/vuelo/1800_buenos-aires-rio-cuarto"
+        },
+        {
+            "type": "simple",
+            "origin": "Buenos Aires",
+            "destination": "Tucumán",
+            "price": 2300,
+            "currency": "ARS",
+            "currencySymbol": "$",
+            "url":"es-ar/reservasservicios/vuelo/146_tucuman"
+        }    
+    ]
+}
+ 
+var header = {   
+    "el" : "#slider",
+    "img" : {
+        "name": "slide1.jpg",
+        "folder": "img",
+        "alt": "Viaja con Grupo Sancor Seguros"
+    },
+    "url": "sancor-seguros"
+};
+
+headerView = new HeaderView(logo);
+headerView.render();
+
+subMenuView = new SubMenuView(subMenu);
+subMenuView.render();
+
+menuBarView = new MenuBarView(menu);
+menuBarView.render();
+
+headerView = new HeaderView(header);
+headerView.render();
+
+
+var promoView;
+
+promos.promos.map( promo => {
+    promoView = new PromoView({
+        el: '#promosDest',
+        model: new Promo(promo)
+    });
+    promoView.render();    
 });
 
-//As I set attributes to the view I just render its content
-promoView.render();
-*/
-
-
-/*I use a map function for iterate the data */
-
-var videoView;
-
-data.videos.map(function(video){ 
-    videoView = new VideoView({
-      el: '#videos',
-      model: new Video(video)
+promosSimple.promos.map( promo => {
+    promoView = new PromoView({
+        el: '#promosSimple',
+        model: new Promo(promo)
     });
-
-    videoView.render();
-})
-
+    promoView.render();    
+});

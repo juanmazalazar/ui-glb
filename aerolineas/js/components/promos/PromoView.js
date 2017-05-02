@@ -48,7 +48,35 @@ PromoView.prototype.render = function() {
  * Builds a tamplate layout, attaching model to its container 
  */
 PromoView.prototype.template = function() {
-    return '<div><div>' + this.get("model").get("origin") + ' </div><div>' +
-        this.get("model").get("destination") + ' </div><div>' +
-        this.get("model").get("price") + ' </div></div>';
+
+    let model = this.get("model");
+
+    if(model.get("type")=="full"){
+        return `<div class="cols left md-6">
+                    <div class="row promo-content">
+                        <div class="cols left md-6 promo-image">
+                            <img src="${model.get("img").folder}/${model.get("img").name}" alt="${model.get("img").alt}" />
+                        </div>
+                        <div class="cols left md-6 promo-info">
+                            <span class="promo-origin">${model.get("origin")}</span>
+                            <h2 class="aa-color promo-title promo-destination">${model.get("destination")}</h2>
+                            <p class="promo-description">${model.get("description")}</p>
+                            <span class="promo-purchase-title">Tarifa:</span>
+                            <span class="aa-color promo-price">${model.get("currencySymbol")} ${model.get("price")}</span>
+                            <a class="aa-color promo-purchase" href="${model.get("url")}">Comprar</a>
+                        </div>
+                    </div>
+                </div>`
+    }else{
+        return `<div class="cols left md-3">
+                    <div class="short-promo-content promo-content">
+                        <span class="promo-origin">${model.get("origin")}</span>
+                        <h2 class="aa-color promo-title promo-destination">${model.get("destination")}</h2>                        
+                        <span class="promo-purchase-title">Tarifa:</span>
+                        <span class="aa-color promo-price">${model.get("currencySymbol")} ${model.get("price")}</span>
+                        <a class="aa-color promo-purchase" href="${model.get("url")}">Comprar</a>
+                    </div>
+                </div>`;
+    }
+
 }
